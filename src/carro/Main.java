@@ -15,7 +15,36 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    Carro carro1=new Carro("rcx168","jaguar");
+    
+        Llanta llanta1=new Llanta("pirelli","16");
+        Llanta llanta2=new Llanta("pirelli","16");
+        Llanta llanta3=new Llanta("pirelli","16");
+        Llanta llanta4=new Llanta("pirelli","16");
+        Eje eje1=new Eje("s");
+        Eje eje2=new Eje("w");
+        carro1.setMotor(500,eje1);
+        eje1.agregarMotor(carro1.getMotor());
+        eje1.nuevaLLanta(llanta1);
+        eje1.nuevaLLanta(llanta2);
+        eje2.nuevaLLanta(llanta3);
+        eje2.nuevaLLanta(llanta4);
+        carro1.agregarEje(eje1);
+        carro1.agregarEje(eje2);
+        carro1.agregarLlanta(llanta1);
+        carro1.agregarLlanta(llanta2);
+        carro1.agregarLlanta(llanta3);
+        carro1.agregarLlanta(llanta4);
+        System.out.println("Carro:");
+        System.out.println(carro1.getMarca());
+        System.out.println(carro1.getPlaca());
+        System.out.println("Motor:");
+        System.out.println(carro1.getMotor().getPotencia());
+        System.out.println(carro1.getMotor().getEje().getLlantas().getDiametro()+"   "+carro1.getMotor().getEje().getLlantas().getMarca());
+        System.out.println("Ejes:");
+        System.out.println(eje1.getLlantas().getDiametro());
+        System.out.println(eje2.getLlantas().getMarca());
+        
     }
     
 }
