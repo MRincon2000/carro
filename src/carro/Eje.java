@@ -32,8 +32,24 @@ public boolean agregarMotor(Motor motor1){
     this.motor=motor1;
     return true;
 }
-public Llanta getLlantas(){
-return llantas[1];
+public Llanta getLlantas(int i){
+return llantas[i];
 }    
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public Motor getMotor() {
+        return motor;
+    }
+
+    public void setMotor(Motor motor) {
+        this.motor = motor;
+    }
 
 }

@@ -40,11 +40,20 @@ public class Main {
         System.out.println(carro1.getPlaca());
         System.out.println("Motor:");
         System.out.println(carro1.getMotor().getPotencia());
-        System.out.println(carro1.getMotor().getEje().getLlantas().getDiametro()+"   "+carro1.getMotor().getEje().getLlantas().getMarca());
+        System.out.println(carro1.getMotor().getEje().getMarca());
+        for(int i=0;i<2;i++){
+        System.out.println(carro1.getMotor().getEje().getLlantas(i).getDiametro()+"   "+carro1.getMotor().getEje().getLlantas(i).getMarca());
+        }
         System.out.println("Ejes:");
-        System.out.println(eje1.getLlantas().getDiametro());
-        System.out.println(eje2.getLlantas().getMarca());
-        
+        for (int i=0;i<2;i++){
+            System.out.println(eje1.getLlantas(i).getDiametro() +"  "+eje1.getLlantas(i).getMarca()); 
+        }
+        System.out.println(eje1.getMarca());
+        System.out.println(eje1.getMotor().getPotencia());
+        for(int i=0;i<2;i++){
+            System.out.println(eje2.getLlantas(i).getDiametro()+"   "+eje2.getLlantas(i).getMarca());
+        }
+        System.out.println(eje2.getMarca());
     }
     
 }
